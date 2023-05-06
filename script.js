@@ -1,5 +1,7 @@
 contador = 0
 var botao = document.getElementById("alterar");
+var search = document.querySelector('#busca');
+nomes = []
 
 function cadastrar() {
     nome = document.getElementById('nome').value;
@@ -14,6 +16,8 @@ function cadastrar() {
         <td <button id="alterar" onclick=alterar(${contador})>Alterar</button> </td>
         <td <button id="excluir" onclick=excluir(${contador})>Excluir</button> </td>
     </tr>`
+    nomes.push(nome)
+    console.log(nomes)
 }
 
 function excluir(id) {
@@ -45,5 +49,25 @@ function alteracao(id) {
         <td <button id="alterar" onclick=alterar(${id})>Alterar</button> </td>
         <td <button id="excluir" onclick=excluir(${id})>Excluir</button> </td>
     </tr>`
+    nomes[id-1] = nome_novo
+    console.log(nomes)
     document.querySelector('.formulario_alteracao').innerHTML = ''
 }
+
+
+search.addEventListener('input', () => {
+  const termoDeBusca = search.value;
+  console.log(termoDeBusca)
+  if (termoDeBusca.length > 0) {
+    for (var i = 1; i < nomes.length; i++) {
+        if (termoDeBusca == nomes[i].slice(-1, termoDeBusca.length)) {
+            console.log("SIm")
+        } else {
+            let elemento = document.getElementById(`cliente_${i}`);
+            elemento.style.display = 'none';
+        }
+      }
+  } else {
+
+  }
+});

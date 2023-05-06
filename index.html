@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Cadastro de Estudantes</title>
 </head>
 <body>
@@ -19,7 +20,9 @@
             <input type="text" id="periodo" placeholder="Digite o seu período" required> <br><br>
         </div>
     </form>
-    <button class="cadastrar" onclick=cadastrar()>Cadastrar</button>
+    <button class="cadastrar" onclick=cadastrar()>Cadastrar</button> <br><br>
+    <label for="nome">Buscar estudante:</label>
+    <input type="text" id="busca" placeholder="Digite o nome do estudante"> <br><br>
     <div class="container">
         <div>
             <table id="lista-nomes">
