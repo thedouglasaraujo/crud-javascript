@@ -1,0 +1,56 @@
+body {
+    background-color: #f5f7fa;
+    text-align: center;
+}
+
+.titulo {
+    text-align: center;
+}
+
+.formulario {
+    width: 40%;
+    margin: auto auto;
+    align-items: center;
+    justify-content: center;
+}
+.formulario label {
+    font-size: 20px;
+}
+
+.formulario input {
+    height: 30px;
+}
+
+#curso {
+    width: 60%;
+}
+
+#nome {
+    width: 54%;
+}
+
+#periodo {
+    width: 59%;
+}
+
+.cadastrar {
+    text-align: center;
+    height: 40px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto auto;
+    font-size: 22px;
+}
+
+table {
+    margin-top: 20px;
+    width: 100%;
+}
+
+table #alterar, #excluir {
+    cursor: pointer;
+}
