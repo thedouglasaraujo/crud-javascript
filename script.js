@@ -56,18 +56,23 @@ function alteracao(id) {
 
 
 search.addEventListener('input', () => {
-  const termoDeBusca = search.value;
-  console.log(termoDeBusca)
-  if (termoDeBusca.length > 0) {
-    for (var i = 1; i < nomes.length; i++) {
-        if (termoDeBusca == nomes[i].slice(-1, termoDeBusca.length)) {
-            console.log("SIm")
-        } else {
-            let elemento = document.getElementById(`cliente_${i}`);
-            elemento.style.display = 'none';
+    const termoDeBusca = search.value;
+    console.log(termoDeBusca)
+    if (termoDeBusca.length > 0) {
+      for (var i = 0; i <= nomes.length; i++) {
+          if (termoDeBusca == nomes[i].slice(0, termoDeBusca.length)) {
+              console.log("SIm")
+              let elemento = document.getElementById(`cliente_${i+1}`);
+              elemento.style.display = '';
+          } else {
+              let elemento = document.getElementById(`cliente_${i+1}`);
+              elemento.style.display = 'none';
+          }
         }
+    } else { 
+      for (var i = 1; i < nomes.length; i++) {
+          let elemento = document.getElementById(`cliente_${i}`);
+              elemento.style.display = '';
       }
-  } else {
-
-  }
-});
+    }
+  });
