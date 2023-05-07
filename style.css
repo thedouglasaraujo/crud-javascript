@@ -60,7 +60,7 @@ body {
     margin-left: 2px;
 }
 
-.cadastrar {
+#cadastrar_st, #alterar_st {
     text-align: center;
     height: 40px;
     font-size: 20px;
