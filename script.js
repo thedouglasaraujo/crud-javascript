@@ -1,12 +1,12 @@
-contador = 0
-var botao = document.getElementById("alterar");
-var search = document.querySelector('#busca');
+let contador = 0
+let botao = document.getElementById("alterar");
+let search = document.querySelector('#busca');
 nomes = ["Douglas Araújo Silva"]
 
 function cadastrar() {
-    nome = document.getElementById('nome').value;
-    curso = document.getElementById('curso').value;
-    periodo = document.getElementById('periodo').value;
+    let nome = document.getElementById('nome').value;
+    let curso = document.getElementById('curso').value;
+    let periodo = document.getElementById('periodo').value;
     if (nome == "" || curso == "" || periodo == "") {
         alert("Preencha todos os campos!");
         return;
@@ -16,11 +16,12 @@ function cadastrar() {
     <tr id="cliente_${contador}">
         <td id="nome_aluno">${nome}</td>    
         <td id="curso_aluno">${curso}</td>
-        <td id="periodo_aluno">${periodo}</td>
+        <td id="periodo_aluno">${periodo}º Período</td>
         <td> <button id="alterar" onclick=alterar(${contador})><img src="images/editar.png"></button> </td>
         <td> <button id="excluir" onclick=excluir(${contador})><img src="images/excluir.png"></button> </td>
     </tr>`
-    nomes.push(nome)
+    nomes.push(nome);
+    limpar_inputs();
 }
 
 function excluir(id) {
@@ -32,9 +33,15 @@ function alterar(id) {
     <label for="nome">Nome:</label>
     <input type="text" id="nome_alteracao" placeholder="Digite o seu nome" required value="${nomes[id]}"> <br><br>
     <label for="nome">Curso:</label>
-    <input type="text" id="curso_alteracao" placeholder="Digite o seu curso" required> <br><br>
-    <label for="nome">Período:</label>
-    <input type="text" id="periodo_alteracao" placeholder="Digite o seu período" required> <br><br>
+    <select name="curso" id="curso_alteracao">
+        <option value="Sistemas de Informação">Sistemas de Informação</option>
+        <option value="Ciência da Computação">Ciência da Computação</option>
+        <option value="Engenharia da Computação">Engenharia da Computação</option>
+    </select>
+    <div class="colocar_periodo">
+        <label for="nome">Período:</label>
+        <input id="periodo_alteracao" type="number" required max="10" min="1" />
+    </div>
     </div>
     <button class="cadastrar" onclick=alteracao(${id})>Confirmar a alteração</button>`
 }
@@ -48,7 +55,7 @@ function alteracao(id) {
     <tr id="cliente_${id}">
         <td>${nome_novo}</td>    
         <td>${curso_novo}</td>
-        <td>${periodo_novo}</td>
+        <td>${periodo_novo}º Período</td>
         <td> <button id="alterar" onclick=alterar(${id})><img src="images/editar.png"></button> </td>
         <td> <button id="excluir" onclick=excluir(${id})><img src="images/excluir.png"></button> </td>
     </tr>`
@@ -61,7 +68,7 @@ search.addEventListener('input', () => {
     const termoDeBusca = search.value;
     console.log(termoDeBusca)
     if (termoDeBusca.length > 0) {
-      for (var i = 0; i <= nomes.length; i++) {
+      for (var i = -1; i <= nomes.length; i++) {
           if (termoDeBusca == nomes[i+1].slice(0, termoDeBusca.length)) {
               console.log("SIm")
               let elemento = document.getElementById(`cliente_${i+1}`);
@@ -72,7 +79,7 @@ search.addEventListener('input', () => {
           }
         }
     } else { 
-      for (var i = 0; i < nomes.length; i++) {
+      for (var i = -1; i < nomes.length; i++) {
           let elemento = document.getElementById(`cliente_${i+1}`);
               elemento.style.display = '';
       }
@@ -82,3 +89,9 @@ search.addEventListener('input', () => {
 document.querySelector('form').addEventListener('submit', function(event) {
     event.preventDefault();
 });
+
+function limpar_inputs() {
+    document.getElementById('nome').value = '';
+    document.getElementById('curso').value = '';
+    document.getElementById('periodo').value = '';
+}

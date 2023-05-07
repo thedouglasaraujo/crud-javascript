@@ -15,9 +15,15 @@
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite o seu nome" required> <br><br>
             <label for="nome">Curso:</label>
-            <input type="text" id="curso" placeholder="Digite o seu curso" required> <br><br>
-            <label for="nome">Período:</label>
-            <input type="text" id="periodo" placeholder="Digite o seu período" required> <br><br>
+            <select name="curso" id="curso">
+                <option value="Sistemas de Informação">Sistemas de Informação</option>
+                <option value="Ciência da Computação">Ciência da Computação</option>
+                <option value="Engenharia da Computação">Engenharia da Computação</option>
+              </select>
+            <div class="colocar_periodo">
+                <label for="nome">Período:</label>
+                <input id="periodo" type="number" required max="10" min="1" />
+            </div>
             <div class="botton-cad">
                 <button class="cadastrar" onclick=cadastrar()>Cadastrar</button> <br><br>
             </div>
