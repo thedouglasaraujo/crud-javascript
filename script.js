@@ -7,6 +7,9 @@ function cadastrar() {
     let nome = document.getElementById('nome').value;
     let curso = document.getElementById('curso').value;
     let periodo = document.getElementById('periodo').value;
+    let faltas = document.getElementById('faltas').value;
+    let notaum = document.getElementById('notaum').value;
+    let notadois = document.getElementById('notadois').value;
     if (nome == "" || curso == "" || periodo == "") {
         alert("Preencha todos os campos!");
         return;
@@ -17,6 +20,10 @@ function cadastrar() {
         <td id="nome_aluno">${nome}</td>    
         <td id="curso_aluno">${curso}</td>
         <td id="periodo_aluno">${periodo}º Período</td>
+        <td id="faltas_aluno">${faltas}</td>
+        <td id="notaum_aluno">${notaum}</td>
+        <td id="notadois_aluno">${notadois}</td>
+        <td id="media_aluno">${(parseInt(notaum) + parseInt(notadois))/2}</td>
         <td> <button id="alterar" onclick=alterar(${contador})><img src="images/editar.png"></button> </td>
         <td> <button id="excluir" onclick=excluir(${contador})><img src="images/excluir.png"></button> </td>
     </tr>`

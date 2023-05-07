@@ -111,3 +111,10 @@ th{
 img {
     width: 35px;
 }
+
+.colocar_notas {
+    margin-bottom: 15px;
+}
+#notaum, #notadois, #faltas {
+    width: 38px;
+}
