@@ -14,6 +14,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: left;
+    z-index: 10;
 }
 
 .botton-cad {
@@ -25,8 +26,13 @@ body {
     height: 30px;
 }
 
-.formulario label, .buscar_titulo_texto {
+.formulario label,
+.buscar_titulo_texto {
     font-size: 20px;
+}
+
+.buscar_titulo_texto {
+    margin-right: 5px;
 }
 
 .formulario input {
@@ -60,7 +66,8 @@ body {
     margin-left: 2px;
 }
 
-#cadastrar_st, #alterar_st {
+#cadastrar_st,
+#alterar_st {
     text-align: center;
     height: 40px;
     font-size: 20px;
@@ -70,11 +77,10 @@ body {
     border-radius: 5px;
 }
 
-.container {
-    width: 80%;
+#container {
+    width: 90%;
     margin: auto auto;
     font-size: 22px;
-    
 }
 
 table {
@@ -83,28 +89,31 @@ table {
     margin-bottom: 30px;
 }
 
-td, th {
-	padding: 0.4em;
-	border: 1px solid #ccc;
-	text-align: center;
+td,
+th {
+    padding: 0.4em;
+    border: 1px solid #ccc;
+    text-align: center;
 }
 
 td {
     padding: 3px;
 }
 
-th{
-	background-color: #e6e3e3;
+th {
+    background-color: #e6e3e3;
 }
 
-#alterar, #excluir {
+#alterar,
+#excluir {
     cursor: pointer;
     font-size: 18px;
     border: none;
     border-radius: 5px;
 }
 
-#alterar, #excluir {
+#alterar,
+#excluir {
     background-color: #f5f7fa;
 }
 
@@ -115,6 +124,15 @@ img {
 .colocar_notas {
     margin-bottom: 15px;
 }
-#notaum, #notadois, #faltas {
+
+#notaum,
+#notadois,
+#faltas {
     width: 38px;
+}
+
+#sombra {
+    box-shadow: 0;
+    margin-top: 15px;
+    margin-bottom: 25px;
 }

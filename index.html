@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,10 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <title>Cadastro de Estudantes</title>
 </head>
+
 <body>
     <h1 class="titulo">Cadastro de Estudantes</h1>
     <form action="">
-        <div class="formulario">
+        <div class="formulario" id="sombra">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite o seu nome" required> <br><br>
             <label for="nome">Curso:</label>
@@ -19,7 +21,7 @@
                 <option value="Sistemas de Informação">Sistemas de Informação</option>
                 <option value="Ciência da Computação">Ciência da Computação</option>
                 <option value="Engenharia da Computação">Engenharia da Computação</option>
-              </select>
+            </select>
             <div class="colocar_periodo">
                 <label for="nome">Período:</label>
                 <input id="periodo" type="number" required max="10" min="1" />
@@ -37,10 +39,9 @@
             </div>
         </div>
     </form>
-    
     <label for="nome" class="buscar_titulo_texto">Buscar:</label>
     <input type="text" id="busca" placeholder="Digite o nome do estudante"> <br><br>
-    <div class="container">
+    <div id="container">
         <div>
             <table id="lista-nomes">
                 <tr>
@@ -56,7 +57,7 @@
                     <th>Excluir</th>
                 </tr>
                 <tr id="cliente_0">
-                    <td id="nome_aluno">Douglas Araújo Silva</td>    
+                    <td id="nome_aluno">Douglas Araújo Silva</td>
                     <td id="curso_aluno">Sistemas de Informação</td>
                     <td id="periodo_aluno">3º Período</td>
                     <td id="faltas_aluno">0</td>
@@ -64,7 +65,8 @@
                     <td id="notadois_aluno">10</td>
                     <td id="media_aluno">10</td>
                     <td id="situação_aluno">Aprovado por média</td>
-                    <td><button id="alterar" onclick=formulario_alteracao(0)><img src="images/editar.png"></button> </td>
+                    <td><button id="alterar" onclick='formulario_alteracao(0, "Douglas Araújo Silva")'><img src="images/editar.png"></button>
+                    </td>
                     <td><button id="excluir" onclick=excluir(0)><img src="images/excluir.png"></button> </td>
                 </tr>
             </table>
@@ -73,4 +75,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
