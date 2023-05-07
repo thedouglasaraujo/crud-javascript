@@ -12,16 +12,19 @@
     <h1 class="titulo">Cadastro de Estudantes</h1>
     <form action="">
         <div class="formulario">
-            <label for="nome">Nome Completo:</label>
+            <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite o seu nome" required> <br><br>
             <label for="nome">Curso:</label>
             <input type="text" id="curso" placeholder="Digite o seu curso" required> <br><br>
             <label for="nome">Período:</label>
             <input type="text" id="periodo" placeholder="Digite o seu período" required> <br><br>
+            <div class="botton-cad">
+                <button class="cadastrar" onclick=cadastrar()>Cadastrar</button> <br><br>
+            </div>
         </div>
     </form>
-    <button class="cadastrar" onclick=cadastrar()>Cadastrar</button> <br><br>
-    <label for="nome">Buscar estudante:</label>
+    
+    <label for="nome" class="buscar_titulo_texto">Buscar:</label>
     <input type="text" id="busca" placeholder="Digite o nome do estudante"> <br><br>
     <div class="container">
         <div>
@@ -30,13 +33,15 @@
                     <th>Nome Completo</th>
                     <th>Curso</th>
                     <th>Período</th>
+                    <th>Editar</th>
+                    <th>Excluir</th>
                 </tr>
                 <tr id="cliente_0">
                     <td id="nome_aluno">Douglas Araújo Silva</td>    
                     <td id="curso_aluno">Sistemas de Informação</td>
                     <td id="periodo_aluno">3º Período</td>
-                    <td id="alterar" onclick=alterar(0)>Alterar</button> </td>
-                    <td <button id="excluir" onclick=excluir(0)>Excluir</button> </td>
+                    <td><button id="alterar" onclick=alterar(0)><img src="images/editar.png"></button> </td>
+                    <td><button id="excluir" onclick=excluir(0)><img src="images/excluir.png"></button> </td>
                 </tr>
             </table>
         </div>

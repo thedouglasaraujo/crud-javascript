@@ -9,10 +9,15 @@ body {
 }
 
 .formulario {
-    width: 40%;
+    width: 20%;
     margin: auto auto;
     align-items: center;
     justify-content: center;
+    text-align: left;
+}
+
+.botton-cad {
+    text-align: center;
 }
 
 #busca {
@@ -20,7 +25,7 @@ body {
     height: 30px;
 }
 
-.formulario label {
+.formulario label, .buscar_titulo_texto {
     font-size: 20px;
 }
 
@@ -29,22 +34,33 @@ body {
 }
 
 #curso {
-    width: 60%;
+    width: 80%;
+    margin-left: 2px;
 }
 
 #nome {
-    width: 54%;
+    width: 78%;
+    margin-left: 2px;
+
 }
 
 #periodo {
-    width: 59%;
+    width: 74%;
+    margin-left: 2px;
+}
+
+.buscar_titulo_texto {
+    margin-left: 2px;
 }
 
 .cadastrar {
     text-align: center;
     height: 40px;
     font-size: 20px;
-    text-align: center;
+    background-color: #337ab7;
+    border: none;
+    color: white;
+    border-radius: 5px;
 }
 
 .container {
@@ -58,6 +74,27 @@ table {
     width: 100%;
 }
 
-table #alterar, #excluir {
+td, th {
+	padding: 0.4em;
+	border: 1px solid #ccc;
+	text-align: center;
+}
+
+th{
+	background-color: #e6e3e3;
+}
+
+#alterar, #excluir {
     cursor: pointer;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+}
+
+#alterar, #excluir {
+    background-color: #f5f7fa;
+}
+
+img {
+    width: 40px;
 }
