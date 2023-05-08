@@ -25,15 +25,15 @@
             </select>
             <div class="colocar_periodo">
                 <label for="nome">Período:</label>
-                <input id="periodo" type="number" required min="1" max="10"/>
+                <input id="periodo" type="number" required min="1" max="10" />
             </div>
             <div class="colocar_notas">
                 <label for="nome">1ª Nota:</label>
-                <input id="notaum" type="number" required min="0" max="10"/>
+                <input id="notaum" type="number" required min="0" max="10" />
                 <label for="nome">2ª Nota:</label>
-                <input id="notadois" type="number" required min="0" max="10"/>
+                <input id="notadois" type="number" required min="0" max="10" />
                 <label for="nome">Faltas:</label>
-                <input id="faltas" type="number" required min="0" max="72"/>
+                <input id="faltas" type="number" required min="0" max="72" />
             </div>
             <div id="botton-cad">
                 <button id="cadastrar_st" onclick='cadastrar("cadastro")'>Cadastrar</button> <br><br>
@@ -45,29 +45,17 @@
     <div id="container">
         <div>
             <table id="lista-nomes">
-                <colgroup>
-                    <col style="width: 30%;">
-                    <col style="width: 23%;">
-                    <col style="width: 9.5%;">
-                    <col style="width: 6%;">
-                    <col style="width: 7%;">
-                    <col style="width: 7.1%;">
-                    <col style="width: 7%;">
-                    <col style="width: 16.5%;">
-                    <col style="width: 90px;">
-                    <col style="width: 90px;">
-                </colgroup>
                 <tr>
-                    <th>Nome Completo</th>
-                    <th>Curso</th>
-                    <th>Período</th>
-                    <th>Faltas</th>
-                    <th>1ª Nota</th>
-                    <th>2ª Nota</th>
-                    <th>Média</th>
-                    <th>Situação</th>
-                    <th>Editar</th>
-                    <th>Excluir</th>
+                    <th id="colnome">Nome Completo</th>
+                    <th id="colcurso">Curso</th>
+                    <th id="colperiodo">Período</th>
+                    <th id="colfaltas">Faltas</th>
+                    <th id="colnotaum">1ª Nota</th>
+                    <th id="colnotadois">2ª Nota</th>
+                    <th id="colmedia">Média</th>
+                    <th id="colsituacao">Situação</th>
+                    <th id="coleditar">Editar</th>
+                    <th id="colexcluir">Excluir</th>
                 </tr>
                 <tr id="cliente_0">
                     <td id="nome_aluno">Douglas Araújo Silva</td>

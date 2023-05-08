@@ -17,7 +17,7 @@ body {
     z-index: 10;
     padding: 10px;
     padding-bottom: 0px;
-    background-color:#d0d4d4;
+    background-color: #d0d4d4;
     border-radius: 2%;
 }
 
@@ -84,7 +84,7 @@ body {
 #container {
     width: 90%;
     margin: auto auto;
-    font-size: 22px;
+    font-size: 21px;
 }
 
 table {
@@ -92,6 +92,40 @@ table {
     width: 100%;
     margin-bottom: 30px;
     table-layout: fixed;
+}
+
+#colnome {
+    width: 30%;
+}
+
+#colcurso {
+    width: 23%;
+}
+
+#colperiodo {
+    width: 9.5%;
+}
+
+#colfaltas {
+    width: 6%;
+}
+
+#colnotaum,
+#colmedia {
+    width: 7%;
+}
+
+#colnotadois {
+    width: 7.1%;
+}
+
+#colsituacao {
+    width: 17.5%;
+}
+
+#coleditar,
+#colexcluir {
+    width: 90px;
 }
 
 td,
