@@ -15,9 +15,13 @@ body {
     justify-content: center;
     text-align: left;
     z-index: 10;
+    padding: 10px;
+    padding-bottom: 0px;
+    background-color:#d0d4d4;
+    border-radius: 2%;
 }
 
-.botton-cad {
+#botton-cad {
     text-align: center;
 }
 
@@ -87,12 +91,13 @@ table {
     margin-top: 20px;
     width: 100%;
     margin-bottom: 30px;
+    table-layout: fixed;
 }
 
 td,
 th {
     padding: 0.4em;
-    border: 1px solid #ccc;
+    border: 1px solid #d4d3d3;
     text-align: center;
 }
 

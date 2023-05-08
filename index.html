@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -18,23 +18,24 @@
             <input type="text" id="nome" placeholder="Digite o seu nome" required> <br><br>
             <label for="nome">Curso:</label>
             <select name="curso" id="curso">
+                <option value="">Selecione um curso</option>
                 <option value="Sistemas de Informação">Sistemas de Informação</option>
                 <option value="Ciência da Computação">Ciência da Computação</option>
                 <option value="Engenharia da Computação">Engenharia da Computação</option>
             </select>
             <div class="colocar_periodo">
                 <label for="nome">Período:</label>
-                <input id="periodo" type="number" required max="10" min="1" />
+                <input id="periodo" type="number" required min="1" max="10"/>
             </div>
             <div class="colocar_notas">
                 <label for="nome">1ª Nota:</label>
-                <input id="notaum" type="number" required max="10" min="0" />
+                <input id="notaum" type="number" required min="0" max="10"/>
                 <label for="nome">2ª Nota:</label>
-                <input id="notadois" type="number" required max="10" min="0" />
+                <input id="notadois" type="number" required min="0" max="10"/>
                 <label for="nome">Faltas:</label>
-                <input id="faltas" type="number" required max="72" min="0" />
+                <input id="faltas" type="number" required min="0" max="72"/>
             </div>
-            <div class="botton-cad">
+            <div id="botton-cad">
                 <button id="cadastrar_st" onclick='cadastrar("cadastro")'>Cadastrar</button> <br><br>
             </div>
         </div>
@@ -44,6 +45,18 @@
     <div id="container">
         <div>
             <table id="lista-nomes">
+                <colgroup>
+                    <col style="width: 30%;">
+                    <col style="width: 23%;">
+                    <col style="width: 9.5%;">
+                    <col style="width: 6%;">
+                    <col style="width: 7%;">
+                    <col style="width: 7.1%;">
+                    <col style="width: 7%;">
+                    <col style="width: 16.5%;">
+                    <col style="width: 90px;">
+                    <col style="width: 90px;">
+                </colgroup>
                 <tr>
                     <th>Nome Completo</th>
                     <th>Curso</th>
@@ -65,7 +78,8 @@
                     <td id="notadois_aluno">10</td>
                     <td id="media_aluno">10</td>
                     <td id="situação_aluno">Aprovado por média</td>
-                    <td><button id="alterar" onclick='formulario_alteracao(0, "Douglas Araújo Silva")'><img src="images/editar.png"></button>
+                    <td><button id="alterar" onclick='formulario_alteracao(0, "Douglas Araújo Silva")'><img
+                                src="images/editar.png"></button>
                     </td>
                     <td><button id="excluir" onclick=excluir(0)><img src="images/excluir.png"></button> </td>
                 </tr>
