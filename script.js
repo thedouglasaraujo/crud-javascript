@@ -4,6 +4,7 @@ let search = document.querySelector('#busca');
 nomes = ["Douglas Araújo Silva"];
 
 function cadastrar(comando, id) {
+
     let nome = document.getElementById('nome').value;
     let curso = document.getElementById('curso').value;
     let periodo = document.getElementById('periodo').value;
@@ -47,6 +48,7 @@ function cadastrar(comando, id) {
     limpar_inputs();
 };
 
+
 function formulario_alteracao(id, nome) {
     let elemento = document.getElementById('sombra');
     elemento.style.boxShadow = '0px 0px 26px #990202';
@@ -54,9 +56,11 @@ function formulario_alteracao(id, nome) {
     document.querySelector('#botton-cad').innerHTML = `<button id="alterar_st" onclick='cadastrar("alterar", ${id})'>Alterar</button>`;
 };
 
+
 function excluir(id) {
     document.querySelector(`#cliente_${id}`).innerHTML = ''
 };
+
 
 search.addEventListener('input', () => {
     const termoDeBusca = search.value.toLowerCase();
@@ -78,9 +82,11 @@ search.addEventListener('input', () => {
     }
 });
 
+
 document.querySelector('form').addEventListener('submit', function (event) {
     event.preventDefault();
 });
+
 
 function limpar_inputs() {
     document.getElementById('nome').value = '';
@@ -90,6 +96,7 @@ function limpar_inputs() {
     document.getElementById('notadois').value = '';
     document.getElementById('faltas').value = '';
 };
+
 
 function situacao(faltas, media) {
     if (faltas > 18) {
