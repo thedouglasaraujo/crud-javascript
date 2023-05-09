@@ -59,10 +59,10 @@ function excluir(id) {
 };
 
 search.addEventListener('input', () => {
-    const termoDeBusca = search.value;
+    const termoDeBusca = search.value.toLowerCase();
     if (termoDeBusca.length > 0) {
         for (var i = -1; i <= nomes.length; i++) {
-            if (termoDeBusca == nomes[i + 1].slice(0, termoDeBusca.length)) {
+            if (termoDeBusca == nomes[i + 1].slice(0, termoDeBusca.length).toLowerCase()) {
                 let elemento = document.getElementById(`cliente_${i + 1}`);
                 elemento.style.display = '';
             } else {

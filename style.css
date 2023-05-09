@@ -1,7 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #f5f7fa;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
 }
 
 .titulo {
@@ -10,6 +15,7 @@ body {
 
 .formulario {
     width: 20%;
+    display: block;
     margin: auto auto;
     align-items: center;
     justify-content: center;
@@ -27,7 +33,7 @@ body {
 
 #busca {
     width: 40%;
-    height: 30px;
+    height: 2.4em;
 }
 
 .formulario label,
@@ -44,7 +50,7 @@ body {
 }
 
 .formulario select {
-    height: 35px;
+    height: 30px;
 }
 
 #nome {
@@ -83,15 +89,19 @@ body {
 
 #container {
     width: 90%;
-    margin: auto auto;
+    height: 100%;
+    margin: 0 auto;
     font-size: 21px;
+    overflow-x: auto;
 }
 
 table {
     margin-top: 20px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: .5em;
     table-layout: fixed;
+    border-collapse: collapse;
+	border-spacing: 0;
 }
 
 #colnome {
@@ -131,6 +141,7 @@ table {
 td,
 th {
     padding: 0.4em;
+    margin: 0;
     border: 1px solid #d4d3d3;
     text-align: center;
 }
@@ -174,4 +185,10 @@ img {
     box-shadow: 0;
     margin-top: 15px;
     margin-bottom: 25px;
+}
+
+@media screen and (max-width: 768px){
+	.formulario {
+        width: 80%;
+    }
 }
