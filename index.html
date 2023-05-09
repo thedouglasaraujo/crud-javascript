@@ -12,11 +12,15 @@
 </head>
 
 <body>
+
     <h1 class="titulo">Cadastro de Estudantes</h1>
+
     <form action="">
         <div class="formulario" id="sombra">
+
             <label for="nome">Nome:</label>
             <input type="text" id="nome" placeholder="Digite o seu nome" required> <br><br>
+
             <label for="nome">Curso:</label>
             <select name="curso" id="curso">
                 <option value="">Selecione um curso</option>
@@ -24,10 +28,12 @@
                 <option value="Ciência da Computação">Ciência da Computação</option>
                 <option value="Engenharia da Computação">Engenharia da Computação</option>
             </select>
+
             <div class="colocar_periodo">
                 <label for="nome">Período:</label>
                 <input id="periodo" type="number" required min="1" max="10" />
             </div>
+
             <div class="colocar_notas">
                 <label for="nome">1ª Nota:</label>
                 <input id="notaum" type="number" required min="0" max="10" />
@@ -36,47 +42,64 @@
                 <label for="nome">Faltas:</label>
                 <input id="faltas" type="number" required min="0" max="72" />
             </div>
+
             <div id="botton-cad">
                 <button id="cadastrar_st" onclick='cadastrar("cadastro")'>Cadastrar</button> <br><br>
             </div>
+
         </div>
     </form>
+
     <label for="nome" class="buscar_titulo_texto">Buscar:</label>
     <input type="text" id="busca" placeholder="Digite o nome do estudante"> <br><br>
+
     <div id="container">
         <div>
+
             <table id="lista-nomes">
-                <tr>
-                    <th id="colnome">Nome Completo</th>
-                    <th id="colcurso">Curso</th>
-                    <th id="colperiodo">Período</th>
-                    <th id="colfaltas">Faltas</th>
-                    <th id="colnotaum">1ª Nota</th>
-                    <th id="colnotadois">2ª Nota</th>
-                    <th id="colmedia">Média</th>
-                    <th id="colsituacao">Situação</th>
-                    <th id="coleditar">Editar</th>
-                    <th id="colexcluir">Excluir</th>
-                </tr>
-                <tr id="cliente_0">
-                    <td id="nome_aluno">Douglas Araújo Silva</td>
-                    <td id="curso_aluno">Sistemas de Informação</td>
-                    <td id="periodo_aluno">3º Período</td>
-                    <td id="faltas_aluno">0</td>
-                    <td id="notaum_aluno">10</td>
-                    <td id="notadois_aluno">10</td>
-                    <td id="media_aluno">10</td>
-                    <td id="situação_aluno">Aprovado por média</td>
-                    <td><button id="alterar" onclick='formulario_alteracao(0, "Douglas Araújo Silva")'><img
-                                src="images/editar.png"></button>
-                    </td>
-                    <td><button id="excluir" onclick=excluir(0)><img src="images/excluir.png"></button> </td>
-                </tr>
+
+                <thead>
+                    <tr>
+                        <th id="colnome">Nome Completo</th>
+                        <th id="colcurso">Curso</th>
+                        <th id="colperiodo">Período</th>
+                        <th id="colfaltas">Faltas</th>
+                        <th id="colnotaum">1ª Nota</th>
+                        <th id="colnotadois">2ª Nota</th>
+                        <th id="colmedia">Média</th>
+                        <th id="colsituacao">Situação</th>
+                        <th id="coleditar">Editar</th>
+                        <th id="colexcluir">Excluir</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="cliente_0">
+                        <td id="nome_aluno">Douglas Araújo Silva</td>
+                        <td id="curso_aluno">Sistemas de Informação</td>
+                        <td id="periodo_aluno">3º Período</td>
+                        <td id="faltas_aluno">0</td>
+                        <td id="notaum_aluno">10</td>
+                        <td id="notadois_aluno">10</td>
+                        <td id="media_aluno">10</td>
+                        <td id="situação_aluno">Aprovado por média</td>
+                        <td><button id="alterar" onclick='formulario_alteracao(0, "Douglas Araújo Silva")'><img
+                                    src="images/editar.png"></button>
+                        </td>
+                        <td><button id="excluir" onclick=excluir(0)><img src="images/excluir.png"></button> </td>
+                    </tr>
+                </tbody>
+
             </table>
+
         </div>
+
         <div class="formulario_alteracao"></div>
+
     </div>
+
     <script src="script.js"></script>
+    
 </body>
 
 </html>

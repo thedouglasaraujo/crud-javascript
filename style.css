@@ -54,7 +54,7 @@ body {
 }
 
 #nome {
-    width: 78%;
+    width: 79%;
     margin-left: 2px;
 }
 
@@ -70,6 +70,7 @@ body {
 
 .colocar_periodo {
     padding: 20px;
+    padding-left: 0;
 }
 
 .buscar_titulo_texto {
@@ -191,4 +192,28 @@ img {
 	.formulario {
         width: 80%;
     }
+    #lista-nomes {
+    display: block;
+    position: relative;
+    width: 100%;
+    }
+
+    table {
+        border-spacing: 10px;
+    }
+    
+    #lista-nomes thead,
+    #lista-nomes tbody,
+    #lista-nomes th,
+    #lista-nomes td,
+    #lista-nomes tr {
+    display: block;
+    }
+
+    #lista-nomes thead {
+        display: none;
+    }
+    
+
+    
 }
