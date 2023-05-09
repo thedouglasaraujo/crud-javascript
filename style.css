@@ -64,13 +64,14 @@ body {
 }
 
 #periodo {
-    width: 70%;
+    width: 74%;
     margin-left: 2px;
 }
 
 .colocar_periodo {
     padding: 20px;
     padding-left: 0;
+    padding-right: 0;
 }
 
 .buscar_titulo_texto {
@@ -188,20 +189,21 @@ img {
     margin-bottom: 25px;
 }
 
-@media screen and (max-width: 768px){
+.value {
+    display: none;
+}
+
+@media screen and (max-width: 767px){
 	.formulario {
         width: 80%;
     }
+
     #lista-nomes {
     display: block;
     position: relative;
     width: 100%;
     }
 
-    table {
-        border-spacing: 10px;
-    }
-    
     #lista-nomes thead,
     #lista-nomes tbody,
     #lista-nomes th,
@@ -213,7 +215,34 @@ img {
     #lista-nomes thead {
         display: none;
     }
-    
 
-    
+    .value {
+        display: inline;
+    }
+
+    #nome_aluno {
+        background-color: #b9b7b7;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .formulario {
+        width: 60%;
+    }
+    table {
+        font-size: 10px;
+    }
+    img {
+        width: 15px;
+    }
+}
+
+@media screen and (min-width: 1210px) and (max-width: 1280px){
+    .formulario {
+        width: 40%;
+        font-size: 12px;
+    }
+    table {
+        font-size: 13px;
+    }
 }

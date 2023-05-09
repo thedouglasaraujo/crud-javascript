@@ -37,10 +37,10 @@ function cadastrar(comando, id) {
         <td id="nome_aluno">${nome}</td>    
         <td id="curso_aluno">${curso}</td>
         <td id="periodo_aluno">${periodo}º Período</td>
-        <td id="faltas_aluno">${faltas}</td>
-        <td id="notaum_aluno">${notaum}</td>
-        <td id="notadois_aluno">${notadois}</td>
-        <td id="media_aluno">${media}</td>
+        <td id="faltas_aluno"><p class="value">Faltas: </p>${faltas}</td>
+        <td id="notaum_aluno"><p class="value">1ª Nota: </p>${notaum}</td>
+        <td id="notadois_aluno"><p class="value">2ª Nota: </p>${notadois}</td>
+        <td id="media_aluno"><p class="value">Média: </p>${media}</td>
         <td id="situacao_aluno">${situacao(faltas, media)}</td>
         <td> <button id="alterar" onclick='formulario_alteracao(${id}, ${JSON.stringify(nome)})'><img src="images/editar.png"></button> </td>
         <td> <button id="excluir" onclick=excluir(${id})><img src="images/excluir.png"></button> </td>`
