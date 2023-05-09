@@ -1,7 +1,7 @@
 let contador = 0;
-let botao = document.getElementById("alterar");
-let search = document.querySelector('#busca');
-nomes = ["Douglas Araújo Silva"];
+const botao = document.getElementById("alterar");
+const search = document.querySelector('#busca');
+const nomes = ["Douglas Araújo Silva"];
 
 function cadastrar(comando, id) {
 
@@ -15,6 +15,11 @@ function cadastrar(comando, id) {
 
     if (nome == "" || curso == "" || periodo == "" || faltas == "" || notaum == "" || notadois == "") {
         alert("Preencha todos os campos!");
+        return;
+    }
+
+    if (notaum > 10 || notaum < 0 || notadois > 10 || notadois < 0 || faltas < 0) {
+        alert("Valores inválidos!");
         return;
     }
 
