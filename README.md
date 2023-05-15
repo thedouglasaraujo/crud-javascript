@@ -5,7 +5,8 @@ Nesta tela de cadastro de estudantes, você pode criar, visualizar, atualizar e 
 - Se o número de faltas for maior que 18, o aluno será reprovado.
 - Se a média for menor que 7, mas maior que 3, o aluno precisará fazer a recuperação final.
 - Se a média for menor que 3, o aluno será reprovado.
-- Se nenhuma das condições anteriores for atendida, o aluno será aprovado por média.<br/>
+- Se nenhuma das condições anteriores for atendida, o aluno será aprovado por média.<br/><br/>
+Acesse: <a href="https://thedouglasaraujo.github.io/crud-javascript/" target="_blank">https://thedouglasaraujo.github.io/crud-javascript/</a>
 
 ## :wrench: Tecnologias utilizadas
 - Javascript
